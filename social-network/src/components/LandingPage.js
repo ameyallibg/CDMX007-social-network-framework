@@ -1,15 +1,15 @@
 import React, { Component } from 'react';  
-import LogIn from '../auth/LogIn';
-import SignUp from '../auth/SignUp';
+import LogIn from './SignInPage';
+import SignUp from './SignUpPage';
 
-export class Home extends React.Component {
+export class LandingPage extends React.Component {
     state = {
 
     }
     render (){
         return (
             <div>
-            <h1>this is Home</h1>
+            <h1>Landing page</h1>
           <LogIn/>
           <SignUp/>
           </div>
@@ -18,4 +18,4 @@ export class Home extends React.Component {
 }
 
   
-export default Home;    
+export default LandingPage;    
