@@ -33,7 +33,7 @@ const NavigationNonAuth = () => (
     <div >
       <ul>
         {/* <li><Link to={ROUTES.LANDING}>Landing</Link> </li> */}
-        <p>GeekIt</p>
+        <p>Geek</p>
         {/* <li><Link to={ROUTES.SIGN_IN}>Sign In</Link></li> */}
       </ul>
     </div>
