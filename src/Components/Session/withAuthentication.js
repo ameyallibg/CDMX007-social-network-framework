@@ -1,4 +1,3 @@
-    
 import React from 'react'
 import AuthUserContext from './context'
 import { withFirebase } from '../Firebase'
@@ -15,29 +14,11 @@ authUser: null,
 componentDidMount () {
 this.listener = this.props.firebase.auth.onAuthStateChanged(
 authUser => {
-    if (authUser) 
-    {this.props.firebase.user(authUser.uid)
-        .once('value').then(snapshot => 
-            {const dbUser = snapshot.val();
-                // default empty roles
-                if (!dbUser.roles) 
-                {dbUser.roles = {};
-            }
-authUser ={
-    uid:authUser.uid,
-    email:authUser.email,
-    ...dbUser,
-};
- this.setState({ authUser })
-            });
-}else{
-    this.setState({authUser:null})
-
-}
+authUser ? this.setState({ authUser }): this.setState(
+    { authUser: null })
 }
 )
 }
-
 componentWillUnmount () {
     this.listener()
     }
@@ -51,4 +32,4 @@ componentWillUnmount () {
     }
     return withFirebase(WithAuthentication)
     }
-    export default withAuthentication
+    export default withAuthentication 

@@ -12,7 +12,7 @@ const SignInPage = () => (
   <div >
   <h1>SignIn</h1>
    <SignInForm />
-   <SignInGoogle/>
+   <SignInGoogle />
    <PasswordForgetLink />
   <SignUpLink /></div>
 </div>
@@ -23,6 +23,7 @@ const INITIAL_STATE = {
   password: '',
   error: null,
 }
+
 const ERROR_CODE_ACCOUNT_EXISTS =
   'auth/account-exists-with-different-credential';
 
@@ -85,6 +86,8 @@ Sign In
 
   }
 }
+
+
 class SignInGoogleBase extends Component {
   constructor(props) {
     super(props);
@@ -130,11 +133,12 @@ class SignInGoogleBase extends Component {
     );
   }
 }
+
 const SignInForm = compose(
   withRouter,
   withFirebase,
 )(SignInFormBase)
-
+export default SignInPage;
 
 const SignInGoogle = compose(
   withRouter,
@@ -142,5 +146,4 @@ const SignInGoogle = compose(
 )(SignInGoogleBase);
 
 
-export default SignInPage;
-export { SignInForm,SignInGoogle }
+export { SignInForm } 
