@@ -1,10 +1,10 @@
 import React from 'react';
-import SignUpPage from '../SignUp';
+import SignInPage from '../SignIn';
 
 const Landing = () => (
   <div>
     <h1>Landing</h1>
-    <SignUpPage/>
+    <SignInPage/>
   </div>
 );
 
