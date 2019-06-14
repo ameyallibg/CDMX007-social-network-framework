@@ -56,7 +56,7 @@ Restaurar contraseña
 }
 const PasswordForgetLink = () => (
 <p>
-<Link to={ROUTES.PASSWORD_FORGET}>¿Olvidaste tu contraseña?</Link>
+<Link to={ROUTES.PASSWORD_FORGET}>Forgot your password?</Link>
 </p>
 );
 export default PasswordForgetPage

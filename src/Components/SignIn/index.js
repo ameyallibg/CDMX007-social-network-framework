@@ -5,18 +5,48 @@ import { SignUpLink } from '../SignUp'
 import { withFirebase } from '../Firebase'
 import { PasswordForgetLink } from '../PasswordForget';
 import * as ROUTES from '../../Constants/routes'
-
+//import LOGO from '../SignIn/Logo'
+import './signIn.css'
 
 const SignInPage = () => (
-<div >
-  <div >
-  <h1>SignIn</h1>
+  <div className='row'>
+
+<div className="split left">
+  <div className="centered">
+    <h1>meet, form business, recognize and create.</h1>
+  </div>
+</div>
+
+<div className="split right">
+  <div className="centered">
+  <div className= "split-right">
+ 
+   
+  <h3 className='center' id = "title-landing">Link up!</h3>
+
+  <div className = "logIn-form">
+
+   
    <SignInForm />
    <SignInGoogle />
-   <SignInFacebook />
+   
+   <SignInFacebook />  
+   <div id = "divider"></div>
    <PasswordForgetLink />
-  <SignUpLink /></div>
+   <SignUpLink /></div>
+  </div>
+   
+  </div>
 </div>
+
+  
+
+
+
+
+</div>
+
+
 )
 
 const INITIAL_STATE = {
@@ -64,21 +94,21 @@ const { email, password, error } = this.state
 const isInvalid = password === '' || email === ''
 return (
 <form onSubmit={this.onSubmit}>
-<input
+<input id="email-input"
 name="email"
 value={email}
 onChange={this.onChange}
 type="text"
 placeholder="Email Address"
 />
-<input
+<input id = "password-input"
 name="password"
 value={password}
 onChange={this.onChange}
 type="password"
 placeholder="Password"
 />
-<button disabled={isInvalid} type="submit" >
+<button disabled={isInvalid} type="submit" id = 'login-form-btn' className="btn-small col l12" >
 Sign In
 </button>
         {error && <p>{error.message}</p>}
@@ -116,7 +146,8 @@ class SignInGoogleBase extends Component {
           error.message = ERROR_MSG_ACCOUNT_EXISTS;
         }
 
-        this.setState({ error });
+        this.setState({ error: null });
+        this.props.history.push(ROUTES.HOME);
       });
 
     event.preventDefault();
@@ -127,7 +158,7 @@ class SignInGoogleBase extends Component {
 
     return (
       <form onSubmit={this.onSubmit}>
-        <button type="submit">Sign In with Google</button>
+        <button type="submit" id="google-signIn" className="btn-small col l12">Google</button>
 
         {error && <p>{error.message}</p>}
       </form>
@@ -161,7 +192,8 @@ class SignInFacebookBase extends Component {
           error.message = ERROR_MSG_ACCOUNT_EXISTS;
         }
 
-        this.setState({ error });
+        this.setState({ error: null });
+        this.props.history.push(ROUTES.HOME);
       });
 
     event.preventDefault();
@@ -172,7 +204,7 @@ class SignInFacebookBase extends Component {
 
     return (
       <form onSubmit={this.onSubmit}>
-        <button type="submit">Sign In with Facebook</button>
+        <button type="submit" id="facebook-signIn" className="btn-small col l12">facebook</button>
 
         {error && <p>{error.message}</p>}
       </form>

@@ -1,8 +1,9 @@
 import app from 'firebase/app';
-import 'firebase/auth'
+import 'firebase/auth';
+import 'firebase/database';
 
 const config = {
-  apiKey: "AIzaSyBWEuHMKTKqSkSASuS_-PTTNS6X94mdTSc",
+  apiKey: "AIzaSyCFWlL69Xzafh2RNID3DTs2xtV8tUBIQ2Q",
   authDomain: "geekreact-4fa91.firebaseapp.com",
   databaseURL: "https://geekreact-4fa91.firebaseio.com",
   projectId: "geekreact-4fa91",
@@ -17,7 +18,9 @@ const config = {
 class Firebase {
   constructor() {
     app.initializeApp(config)
-    this.auth = app.auth()
+    this.auth = app.auth();
+
+    this.db = app.database();
     this.googleProvider = new app.auth.GoogleAuthProvider();
     this.facebookProvider = new app.auth.FacebookAuthProvider();
   }
@@ -41,6 +44,10 @@ class Firebase {
 
   doPasswordUpdate = password =>
     this.auth.currentUser.updatePassword(password)
-}
+    user = uid => this.db.ref(`users/${uid}`);
+    users = () => this.db.ref('users')
+  }
+
+
 
 export default Firebase 
