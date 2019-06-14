@@ -1,0 +1,62 @@
+
+
+.split {
+   height: 100%;
+   width: 50%;
+   position: fixed;
+   z-index: 1;
+   top: 0;
+   overflow-x: hidden;
+   padding-top: 20px;
+ }
+ 
+ .logIn-form{
+ background-color: white;
+ width: 500px;
+ height: 350px;
+ border-radius: 20px;
+ 
+ }
+
+ #title-landing{
+    color: white;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 34px;
+ }
+
+ #email-input{
+    background-color: transparent;
+ }
+
+
+ .left {
+   left: 0;
+   background-image: url(https://images.unsplash.com/photo-1531537571171-a707bf2683da?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=667&q=80);
+   font-family: 'Vidaloka', serif;
+   background-size: cover;
+   color: white;
+ }
+
+
+ .right {
+   right: 0;
+   background-color: #2d6dec;
+ }
+ 
+
+ .centered {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   text-align: center;
+ }
+ 
+
+
+
+
+
+    
+
+

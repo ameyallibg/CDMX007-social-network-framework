@@ -31,7 +31,8 @@ class SignUpFormBase extends Component{
         this.state = {...INITIAL_STATE}
     }
 onSubmit = event => {
-    const { email, passwordOne } = this.state;
+    const {
+         email, passwordOne } = this.state;
     this.props.firebase
     .doCreateUserWithEmailAndPassword(email, passwordOne)
     .then(authUser => {
@@ -107,7 +108,7 @@ placeholder="Confirmar contraseña"
 }
 
 const SignUpLink = () => (
-    <p>¿No tienes una cuenta <Link to={ROUTES.SIGN_UP}> Únete</Link>
+    <p>Don't have an account <Link to={ROUTES.SIGN_UP}>Sign up!</Link>
     </p>
     )
 // const SignUpForm = withRouter(withFirebase(SignUpFormBase))
