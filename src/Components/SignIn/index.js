@@ -23,7 +23,7 @@ const SignInPage = () => (
  
    
   <h3 className='center' id = "title-landing">Link up!</h3>
-  
+
   <div className = "logIn-form">
 
    
@@ -108,7 +108,7 @@ onChange={this.onChange}
 type="password"
 placeholder="Password"
 />
-<button disabled={isInvalid} type="submit" id = 'login100-form-btn' className="btn-small col l12" >
+<button disabled={isInvalid} type="submit" id = 'login-form-btn' className="btn-small col l12" >
 Sign In
 </button>
         {error && <p>{error.message}</p>}
@@ -157,7 +157,7 @@ class SignInGoogleBase extends Component {
 
     return (
       <form onSubmit={this.onSubmit}>
-        <button type="submit" id="google-signIn">Google</button>
+        <button type="submit" id="google-signIn" className="btn-small col l12">Google</button>
 
         {error && <p>{error.message}</p>}
       </form>
@@ -202,7 +202,7 @@ class SignInFacebookBase extends Component {
 
     return (
       <form onSubmit={this.onSubmit}>
-        <button type="submit" id="facebook-signIn">Facebook</button>
+        <button type="submit" id="facebook-signIn" className="btn-small col l12"></button>
 
         {error && <p>{error.message}</p>}
       </form>
