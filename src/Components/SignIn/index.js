@@ -31,7 +31,8 @@ const SignInPage = () => (
    <SignInGoogle />
    
    <SignInFacebook />
-  
+   
+  <div id = "divider"></div>
    <PasswordForgetLink />
    <SignUpLink /></div>
   </div>
@@ -202,7 +203,7 @@ class SignInFacebookBase extends Component {
 
     return (
       <form onSubmit={this.onSubmit}>
-        <button type="submit" id="facebook-signIn" className="btn-small col l12"></button>
+        <button type="submit" id="facebook-signIn" className="btn-small col l12">facebook</button>
 
         {error && <p>{error.message}</p>}
       </form>

@@ -13,7 +13,7 @@
  .logIn-form{
  background-color: white;
  width: 600px;
- height: 350px;
+ height: 500px;
  border-radius: 20px;
  
  }
@@ -22,6 +22,8 @@
     color: white;
     font-family: 'Work Sans', sans-serif;
     font-size: 34px;
+    align-self: auto;
+    margin-bottom: 12%;
  }
 
  #email-input{
@@ -36,14 +38,32 @@
  }
  #login-form-btn{
 width: 200px;
-margin-left: 150px;
+margin-top: 25px;
+margin-bottom: 22px;
+margin-left: 190px;
 border-radius: 34px;
  }
 
  #google-signIn{
    width: 200px;
-   margin-left: 150px;
-   border-radius: 34px;  
+margin-top: 25px;
+margin-bottom: 22px;
+margin-left: 80px;
+border-radius: 34px; 
+background-color: red;
+ }
+#divider{
+   margin-top: 140px;
+   height: 10%;
+   
+}
+ #facebook-signIn{
+   width: 200px;
+margin-top: 25px;
+margin-bottom: 22px;
+margin-left: 25px;
+border-radius: 34px; 
+background-color: #3e7cf8;
  }
 
 
