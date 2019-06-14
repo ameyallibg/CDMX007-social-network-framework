@@ -23,7 +23,7 @@
     font-family: 'Work Sans', sans-serif;
     font-size: 34px;
     align-self: auto;
-    margin-bottom: 12%;
+    margin-bottom: 5%;
  }
 
  #email-input{
@@ -50,7 +50,7 @@ margin-top: 25px;
 margin-bottom: 22px;
 margin-left: 80px;
 border-radius: 34px; 
-background-color: red;
+
  }
 #divider{
    margin-top: 140px;
@@ -63,7 +63,7 @@ margin-top: 25px;
 margin-bottom: 22px;
 margin-left: 25px;
 border-radius: 34px; 
-background-color: #3e7cf8;
+
  }
 
 
