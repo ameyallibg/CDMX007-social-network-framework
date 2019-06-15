@@ -30,9 +30,8 @@ const SignInPage = () => (
    <SignInForm />
    <SignInGoogle />
    
-   <SignInFacebook />
-   
-  <div id = "divider"></div>
+   <SignInFacebook />  
+   <div id = "divider"></div>
    <PasswordForgetLink />
    <SignUpLink /></div>
   </div>
@@ -95,7 +94,7 @@ const { email, password, error } = this.state
 const isInvalid = password === '' || email === ''
 return (
 <form onSubmit={this.onSubmit}>
-<input id= "email-input"
+<input id="email-input"
 name="email"
 value={email}
 onChange={this.onChange}
@@ -147,7 +146,8 @@ class SignInGoogleBase extends Component {
           error.message = ERROR_MSG_ACCOUNT_EXISTS;
         }
 
-        this.setState({ error });
+        this.setState({ error: null });
+        this.props.history.push(ROUTES.HOME);
       });
 
     event.preventDefault();
@@ -192,7 +192,8 @@ class SignInFacebookBase extends Component {
           error.message = ERROR_MSG_ACCOUNT_EXISTS;
         }
 
-        this.setState({ error });
+        this.setState({ error: null });
+        this.props.history.push(ROUTES.HOME);
       });
 
     event.preventDefault();
