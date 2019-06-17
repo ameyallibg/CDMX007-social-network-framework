@@ -49,7 +49,7 @@ const AccountPage = () => (
     {authUser => (
 
     <div >
-        <h6 >{authUser ? authUser.username : null}</h6>
+        <h6>{authUser ? authUser.username : null}</h6>
         <img src={authUser.photoURL} alt=""></img>
         <PasswordForgetForm />
         <PasswordChangeForm />
