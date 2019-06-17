@@ -41,6 +41,7 @@ const NavigationAuth = ({ authUser }) => (
 );
 
 const NavigationNonAuth = () => (
+
   <ul>
     <li>
       <Link to={ROUTES.LANDING}>Landing</Link>
@@ -50,5 +51,17 @@ const NavigationNonAuth = () => (
     </li>
   </ul>
 );
+
+
+  <nav>
+    <div >
+      <ul>
+        {/* <li><Link to={ROUTES.LANDING}>Landing</Link> </li> */}
+        <p>GeekIt</p>
+        <li><Link to={ROUTES.SIGN_IN}>Sign In</Link></li>
+      </ul>
+    </div>
+  </nav>
+)
 
 export default Navigation;
