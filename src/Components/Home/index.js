@@ -113,7 +113,7 @@ onNextPage = () => { this.setState( state =>
              onRemoveMessage={this.onRemoveMessage}
              /> 
              ) : (
-            <div>There are no messages ...</div>
+            <div>There are no messages...</div>
                   )}
         {loading && <div>Loading ...</div>}
         {!loading && messages && 
