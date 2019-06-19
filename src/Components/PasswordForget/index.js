@@ -2,11 +2,12 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { withFirebase } from '../Firebase'
 import * as ROUTES from '../../Constants/routes'
+import './passwordforget.css'
 
 const PasswordForgetPage = () => (
 <div className="row">
 <div className="white col l4 offset-l4">
-<h4>¿Olvidaste tu contraseña?</h4>
+<h4>Forgot your password?</h4>
 <PasswordForgetForm />
 </div></div>
 )
@@ -46,8 +47,8 @@ onChange={this.onChange}
 type="text"
 placeholder="Email Address"
 />
-<button disabled={isInvalid} type="submit" className="col l12 btn-small blue">
-Restaurar contraseña
+<button disabled={isInvalid} type="submit" className="col l12 btn-small blue  width">
+RESET PASSWORD
 </button>
 {error && <p>{error.message}</p>}
 </form>

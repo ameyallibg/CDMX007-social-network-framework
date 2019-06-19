@@ -1,3 +1,23 @@
+.logIn-form{
+  padding:10%
+}
+.buttons-login{
+  width: 100%;
+ 
+  margin-top: 2%;
+}
+.slogan{
+  font-size: 7vw;
+  color: #656b6a;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+
+
+
+@media (min-width: 768px) { 
+
 .split {
     height: 100%;
     width: 50%;
@@ -88,3 +108,4 @@
     transform: translate(-50%, -50%);
     text-align: center;
   }
+}

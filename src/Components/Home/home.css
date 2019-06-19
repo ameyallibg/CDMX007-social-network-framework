@@ -1,0 +1,38 @@
+.home-box{
+    padding:10%;
+}
+
+.card-box{
+    align-items: center;
+    padding:5%;
+    /* justify-content: space-between; */
+}
+.img-card{
+    width: 20%;
+    border-radius: 100%;
+}
+.post-likes{
+    margin-left: 65%;
+}
+.post-card{
+    width:100%;
+}
+
+.post-img{
+    align-items: center;
+    display: flex;
+}
+
+.item-name{
+    padding-left: 5%;
+    width:100%;
+}
+
+.btn-like{
+    border-radius: 50%;
+    box-shadow: 30px 10px 0 #d9534f;
+}
+
+.margin-left{
+    margin-left:5%
+}

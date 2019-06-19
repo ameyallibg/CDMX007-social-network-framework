@@ -36,21 +36,21 @@ this.state = { ...INITIAL_STATE };
             passwordOne !== passwordTwo || passwordOne === ''
         return (<div className='row'><div className='col l6 offset-l1'><p >Change Password</p></div>
             <form onSubmit={this.onSubmit}>
-                <input className='col l6 offset-l1'
+                <input 
                     name='passwordOne'
                     value={passwordOne}
                     onChange={this.onChange}
                     type='password'
                     placeholder='New Password'
                 />
-                <input className='col l6 offset-l1'
+                <input 
                     name='passwordTwo'
                     value={passwordTwo}
                     onChange={this.onChange}
                     type='password'
                     placeholder='Confirm Password'
                 />
-                <button disabled={isInvalid} type='submit' className='col l3 offset-l1 btn-changePassword btn-small waves-effect waves-light'>
+                <button disabled={isInvalid} type='submit' className='btn-changePassword btn-small waves-effect waves-light  width'>
                     Change Password
                 </button>
                 {error && <p>{error.message}</p>}

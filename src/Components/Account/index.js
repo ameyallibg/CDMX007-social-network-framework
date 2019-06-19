@@ -1,21 +1,3 @@
-// import React from 'react'
-// import { AuthUserContext, withAuthorization } from '../Session'
-// import { PasswordForgetForm } from '../PasswordForget'
-// import PasswordChangeForm from '../PasswordChange'
-// const AccountPage = () => (
-// <AuthUserContext.Consumer>
-// {authUser => (
-// <div>
-// <h1>Account: {authUser ? authUser.email : null}</h1>
-// <PasswordForgetForm />
-// <PasswordChangeForm />
-// </div>
-// )}
-// </AuthUserContext.Consumer>
-// );
-// const condition = authUser => !!authUser;
-
-// export default withAuthorization(condition)(AccountPage)
 
 import React, { Component } from 'react'
 import { compose } from 'recompose'
@@ -27,6 +9,7 @@ import {
 import { withFirebase } from '../Firebase'
 import { PasswordForgetForm } from '../PasswordForget'
 import PasswordChangeForm from '../PasswordChange'
+import './account.css'
 
 
 const SIGN_IN_METHODS = [
@@ -48,9 +31,9 @@ const AccountPage = () => (
   <AuthUserContext.Consumer>
     {authUser => (
 
-    <div >
+    <div className="center-align margin">
         <h6>{authUser ? authUser.username : null}</h6>
-        <img src={authUser.photoURL} alt=""></img>
+        <img className=" img-user" src={authUser.photoURL} alt=""></img>
         <PasswordForgetForm />
         <PasswordChangeForm />
         <LoginManagement authUser={authUser} />
@@ -114,7 +97,7 @@ class LoginManagementBase extends Component {
     return (
       <div>
         <div id='methods'>
-          Vincula tus cuentas:
+          <p>Account</p>
         </div>
         <ul>
           {SIGN_IN_METHODS.map(signInMethod => {
@@ -161,7 +144,7 @@ const SocialLoginToggle = ({
 }) =>
   isEnabled ? (
     <button
-      className = 'social-toogle'
+      className = 'social-toogle col l12 btn-small blue width'
       type='button'
       onClick={() => onUnlink(signInMethod.id)}
       disabled={onlyOneLeft}
@@ -170,7 +153,7 @@ const SocialLoginToggle = ({
     </button>
   ) : (
       <button
-      className = 'social-toogle'
+      className = 'social-toogle col l12 btn-small blue width'
         type='button'
         onClick={() => onLink(signInMethod.provider)}
       >
@@ -211,7 +194,7 @@ class DefaultLoginToggle extends Component {
 
     return isEnabled ? (
       <button
-        className = 'social-toogle'
+        className='social-toogle col l12 btn-small blue width'
         type='button'
         onClick={() => onUnlink(signInMethod.id)}
         disabled={onlyOneLeft}
@@ -235,7 +218,7 @@ class DefaultLoginToggle extends Component {
             placeholder='Confirm New Password'
           />
 
-          <button disabled={isInvalid} type='submit'>
+          <button  className="col l12 btn-small blue width" disabled={isInvalid} type='submit'>
             Link {signInMethod.id}
           </button>
         </form>

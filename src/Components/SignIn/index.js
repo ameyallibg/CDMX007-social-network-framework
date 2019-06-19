@@ -13,7 +13,7 @@ const SignInPage = () => (
 
 <div className="split left">
   <div className="centered">
-    <h1>meet, form business, recognize and create.</h1>
+    <h4 className="center-align slogan">Meet, form business, recognize and create.</h4>
   </div>
 </div>
 
@@ -22,18 +22,19 @@ const SignInPage = () => (
   <div className= "split-right">
  
    
-  <h3 className='center' id = "title-landing">Link up!</h3>
+  <h3 className='hide center' id = "title-landing">Link up!</h3>
 
   <div className = "logIn-form">
 
    
    <SignInForm />
+   <SignUpLink />
    <SignInGoogle />
    
    <SignInFacebook />  
    <div id = "divider"></div>
    <PasswordForgetLink />
-   <SignUpLink /></div>
+   </div>
   </div>
    
   </div>
@@ -108,7 +109,7 @@ onChange={this.onChange}
 type="password"
 placeholder="Password"
 />
-<button disabled={isInvalid} type="submit" id = 'login-form-btn' className="btn-small col l12" >
+<button disabled={isInvalid} type="submit" id = 'login-form-btn' className=" buttons-login btn-small col l12" >
 Sign In
 </button>
         {error && <p>{error.message}</p>}
@@ -157,7 +158,7 @@ class SignInGoogleBase extends Component {
 
     return (
       <form onSubmit={this.onSubmit}>
-        <button type="submit" id="google-signIn" className="btn-small col l12">Google</button>
+        <button type="submit" id="google-signIn" className=" buttons-login btn-small col l12">Google</button>
 
         {error && <p>{error.message}</p>}
       </form>
@@ -202,7 +203,7 @@ class SignInFacebookBase extends Component {
 
     return (
       <form onSubmit={this.onSubmit}>
-        <button type="submit" id="facebook-signIn" className="btn-small col l12">facebook</button>
+        <button type="submit" id="facebook-signIn" className=" buttons-login btn-small col l12">facebook</button>
 
         {error && <p>{error.message}</p>}
       </form>
