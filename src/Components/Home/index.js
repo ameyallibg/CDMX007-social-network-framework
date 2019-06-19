@@ -229,7 +229,36 @@ return (
     <li> 
         
         {editMode ? ( 
-        <input type="text" value={editText}  onChange={this.onChangeEditText} /> 
+        
+            <div className="card-content">
+        <div className="col s12 m7">
+            <div className="card horizontal card-box ">
+                
+                <div className="post-card">
+                    <div className="post-img ">
+                    
+                    <img className="img-card" src={message.photoURL} alt=""></img>
+                        <strong className="item-name"> {message.userName}</strong>
+                        </div>
+                        <div>
+                    
+                    <input type="text" value={editText}  onChange={this.onChangeEditText} /> 
+
+                    </div>
+                    <div className="post-likes">
+                
+                        <button className="waves-effect waves-light btn btn-like" type="button" data-contadorlike={contadorlike} onClick={this.sumar}> {contadorlike}</button>
+                   
+                        {message.editedAt && <span>(Edited)</span>}
+
+                        </div>
+
+                        </div> 
+
+                    </div>  
+
+                 </div>    
+          </div> 
         ) : (
     <div className="card-content">
         <div className="col s12 m7">
